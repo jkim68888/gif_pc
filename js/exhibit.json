@@ -1,0 +1,9 @@
+{
+    "exhibit":
+        [{"img":"../images/movie/exhibit_100.jpg","title":"한국나쁜영화 100년"},
+        {"img":"../images/movie/exhibit_first.jpg","title":"어서와~ 독립영화는 처음이지?"},
+        {"img":"../images/movie/exhibit_flower.jpg","title":"들꽃영화상 순회 상영회"},
+        {"img":"../images/movie/exhibit_gwangju.png","title":"다시, 광주"},
+        {"img":"../images/movie/exhibit_remember.jpg","title":"타오르는 여인의 초상"},
+        {"img":"../images/movie/exhibit_toy.jpg","title":"토이솔져스"}]
+}

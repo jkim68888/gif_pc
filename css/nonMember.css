@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+*{ padding: 0; margin: 0; font-family: 'Noto Sans KR', '맑은고딕', 'Malgun Gothic', sans-serif; } 
+li{ list-style: none; } 
+a{ text-decoration: none; } 
+img{ border: none; } 
+table{ border-spacing: 0; border-collapse: collapse; } 
+address{ font-style: normal; } 
+fieldset{ border: none; } 
+legend{ position: absolute; left: -999em; } 
+label.away{ position: absolute; left: -999em; } 
+input[type=button], input[type=submit], input[type=reset], input[type=image], button{ cursor: pointer; } 
+
+/* nonMemberBox */
+#nonMemberBox{ width: 100%; height: 600px; } 
+#nonMemberBox h2{ width: 100%; height: 70px; padding-left: 30px; box-sizing: border-box; line-height: 62px; font-size: 22px; text-align: left; font-weight: 400; color: #fff; background-color: #24125f; }
+#nonMemberBox form{ position: relative; width: 100%; height: 100%; padding: 20px 30px; box-sizing: border-box; }
+#nonMemberBox .star{ position: relative; top: 3px; left: -3px; font-size: 14px; color: #24125f; font-weight: 700; }
+#nonMemberBox table{ width: 100%; border-top: 1px solid #333; }
+#nonMemberBox .subscript{ position: absolute; top: 30px; right: 35px; display: inline; font-size: 14px; }
+#nonMemberBox caption{ width: 100%; height: 40px; font-size: 20px; color: #333; font-weight: 500; text-align: left; }
+#nonMemberBox th{ width: 25%; height: 50px; background-color: #ededed; border-bottom: 1px solid #fff; text-align: left; padding-left: 30px; box-sizing: border-box; font-size: 16px; font-weight: 500; }
+#nonMemberBox td{ width: 75%; height: 50px; border-bottom: 1px solid #ccc; padding-left: 10px; box-sizing: border-box; }
+#nonMemberBox label{ font-size: 14px; }
+#nonMemberBox .title{ font-size: 16px; font-weight: 500; }
+#nonMemberBox .nameBox{ width: 200px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; }
+#nonMemberBox .pwBox{ width: 270px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; }
+#nonMemberBox .box02{ width: 70px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; }
+#nonMemberBox .box03{ width: 55px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; }
+#nonMemberBox .box04{ width: 250px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; margin-top: 10px; }
+#nonMemberBox .phoneBox{ width: 80px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; margin-top: 10px; }
+#nonMemberBox .birth > *{ float: left; }
+#nonMemberBox .birth label{ margin-top: 6px; margin-right: 10px; }
+#nonMemberBox .last{ border-bottom: 1px solid #333; }
+#nonMemberBox .descript{ padding-top: 10px; font-size: 14px; color: #666; }
+#nonMemberBox .btnWrap{ width: 100%; padding: 40px 0; text-align: center; }
+#joinBtn{ width: 140px; height: 40px; border: none; background-color: #666; border-radius: 5px; color: #fff; font-size: 16px; }
+#joinBtn:hover{ border: 1px solid #666; background-color: #fff; color: #666; }
+#confirmBtn{ width: 140px; height: 40px; border: none; border-radius: 5px; background-color: #24125f; color: #fff; font-size: 16px; font-weight: 500; }
+#confirmBtn:hover{ border: 1px solid #24125f; background-color: #fff; color: #24125f; }
+
+
+

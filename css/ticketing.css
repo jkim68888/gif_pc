@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.star{ position: relative; top: 6px; left: -3px; font-size: 14px; color: #24125f; font-size: 22px; font-weight: 700; }
+.descript{ padding-left: 15px; margin-bottom: 20px; box-sizing: border-box; }
+#ticketBox{ position: relative; width: 1180px; height: 800px; padding: 30px; box-sizing: border-box; border-radius: 30px; border: 3px solid #24125f; }
+#ticketBox h3{ padding: 0 20px 20px; box-sizing: border-box; font-weight: 700; color: #333; }
+.dateBox{ position: relative; width: 1100px; height: 60px; padding: 0 30px; box-sizing: border-box; margin: 0 auto; background-color: #ededed; border-radius: 30px; }
+.dateBox ul{ display: flex; justify-content: space-between; }
+.dateBox li{ width: 130px; line-height: 60px; background-image: url(../images/ticket/circle_img.png); background-size: 8px; background-repeat: no-repeat; background-position: left center; text-align: right; }
+.dateBox a{ text-align: right; font-size: 20px; color: #333; }
+.dateBox li:first-child{ width: 75px; height: 48px; background-image: none; }
+.btn{ width: 30px; height: 30px; background-color: #24125f; border-radius: 30px; box-shadow: 2px 2px 2px #999; }
+.prevBtn{ display: none; position: absolute; top: 90px; left: 26px; }
+.nextBtn{ position: absolute; top: 90px; right: 26px; }
+.btn a{ display: block; width: 30px; height: 30px; background-repeat: no-repeat; background-size: 13px; }
+.prevBtn a{ background-image: url(../images/ticket/prev_btn_out.png); background-position: 8px center; }
+.prevBtn a:hover{ background-image: url(../images/ticket/prev_btn_over.png); background-position: 8px center; }
+.nextBtn a{ background-image: url(../images/ticket/next_btn_out.png); background-position: 10px center; }
+.nextBtn a:hover{ background-image: url(../images/ticket/next_btn_over.png); background-position: 10px center; }
+.today{ position: absolute; top: -15px; left: 48px; width: 50px; height: 28px; border-radius: 25px; background-color: #e05975; font-size: 16px; text-align: center; color: #fff; z-index: 1; animation: move 2s ease-in-out 1s infinite; }
+@keyframes move{
+    50%{
+        transform: translateY(20%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.dateBox a.active{ border-bottom: 2px solid #24125f; font-weight: 700; color: #24125f; }
+.dateBox a:hover{ font-weight: 700; }
+.btn:hover{ background-color: #fff; }
+.movieBox{ position: relative; float: left; width: 400px; height: 590px; margin-top: 30px; box-sizing: border-box; border: 1px solid #999; }
+.movieBox h3, .timeBox h3{ width: 100%; height: 50px; line-height: 50px; padding: 20px; box-sizing: border-box; background-color: #ededed; font-weight: 700; font-size: 22px; color: #333; }
+.movieBox .text{ position: absolute; top: calc(50%); right: calc(25%); font-size: 16px; font-weight: 400; color: #666; }
+.movieBox li{ height: 50px; }
+.movieBox a{ display: flex; justify-content: space-between; height: 100%; line-height: 45px; margin-bottom: 10px; box-sizing: border-box; border-bottom: 1px solid #333; }
+.movieBox .name{ width: 330px; }
+.movieBox .age{ padding: 0 20px; box-sizing: border-box; }
+.movieBox a.active{ background-color: #24125f; color: #fff; }
+.timeBox{ position: relative; float: right; width: 700px; height: 590px; margin-top: 30px; box-sizing: border-box; border: 1px solid #999; }
+.timeBox .text{ position: absolute; top: calc(50%); left: calc(30%); font-size: 16px; font-weight: 400; color: #666; }
+.timeBox li{ height: 80px; line-height: 80px; margin: 10px; box-sizing: border-box; border: 1px solid #333; border-radius: 10px; }
+.timeBox a{ display: block; width: 100%; height: 100%; }
+.timeBox li:hover{ background-color: #ededed; }
+.timeBox h5{ float: left; width: 180px; padding-left: 20px; box-sizing: border-box; font-weight: 400; font-size: 26px; }
+.timeBox h6{ float: left;  width: 240px; font-weight: 400; font-size: 28px; }
+.timeBox .total{ float: left; width: 110px; font-size: 16px; }
+.timeBox .available{ float: right; width: 125px; font-size: 16px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

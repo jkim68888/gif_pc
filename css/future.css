@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+#futureMovie{ width: 1180px; height: 1300px; background-image: url(../images/movie/bg01.jpg); background-size: cover; background-repeat: no-repeat; background-position: bottom; }
+#futureMovie li{ float: left; position: relative; margin: 40px 47px; box-sizing: border-box; width: 200px; height: 350px; cursor: pointer; }
+#futureMovie .imgBox{ display: block; width: 100%; height: 260px; border-radius: 10px; background-color: #000; }
+#futureMovie img{ width: 100%; height: 100%; border-radius: 10px; }
+#futureMovie .viewMore{ position: absolute; top: 110px; left: 40px; width: 120px; height: 32px; border: 2px solid #fff; text-align: center;  line-height: 31px; color: #fff; opacity: 0; }
+#futureMovie li:hover img{ opacity: 0.5; }
+#futureMovie li:hover .viewMore{ opacity: 1; }
+#currentMovie li:nth-child(4), #currentMovie li:nth-child(8){ float: right; }
+#futureMovie .viewMore:hover{ border: none; background-color: #fff; color: #24125f; }
+#futureMovie h3{ float: left; width: 40px; margin-top: 10px; margin-right: 35px; box-sizing: border-box; line-height: 40px; text-align: center; font-weight: 400; font-size: 16px; border-radius: 40px; }
+#futureMovie h4{ float: right; width: 115px; margin-top: 10px; box-sizing: border-box; line-height: 42px; font-weight: 700; font-size: 20px; color: #333; }
+#futureMovie li:nth-child(5) h3, #futureMovie li:nth-child(7) h3{ margin-right: 10px; }
+#futureMovie li:nth-child(5) h4, #futureMovie li:nth-child(7) h4{ width: 145px; }
+#futureMovie .rate{ float: left; width: 100px; margin-top: 10px; margin-left: 10px; box-sizing: border-box; }
+#futureMovie .grade{ float: right; width: 80px; margin-top: 10px; margin-left: 10px; box-sizing: border-box; }
+#futureMovie .grade:before{ position: relative; top: -2px; left: -8px; content: '|'; font-size: 13px; color: #333; }

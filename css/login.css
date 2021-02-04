@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+#loginBox{ padding: 0 0 120px; box-sizing: border-box; }
+#loginBox .title{ width: 100%; margin-bottom: 80px; padding: 10px 0; box-sizing: border-box; }
+#loginBox h2{ width: 136px; margin: 0 auto; box-sizing: border-box; font-size: 48px; font-weight: 700; color: #222; }
+#loginBox form{ width: 800px; height: 250px; margin: 0 auto; }
+#loginBox .inputBox{ width: 500px; height: 155px; margin-right: 90px; box-sizing: border-box; }
+#loginBox .first > li{ float: left; }
+#loginBox .box{ width: 500px; height: 60px; }
+#loginBox #id{ margin-bottom: 31px; box-sizing: border-box; }
+#loginBox button{ width: 200px; height: 155px; border: none; border-radius: 10px; background-color: #24125f; font-size: 28px; color: #fff; transition: 0.4s; }
+#loginBox button:hover{ border: 1px solid #24125f; background-color: #fff; font-size: 28px; color: #24125f; }
+#loginBox .last > li{ float: left; margin-top: 40px; box-sizing: border-box; }
+#loginBox .underline:hover{ text-decoration: underline; font-style: italic; }
+#loginBox .last a, label{ font-size: 16px; color: #333; }
+#loginBox .chkBox{ width: 550px; }
+#loginBox .search{ width: 180px; }

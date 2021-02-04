@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* header */
+header{ width: 100%; min-width: 1180px; height: 120px; transition: 0.3s; }
+.hTop{ width: 1180px; height: 80px; margin: 0 auto; }
+.tNav{ float: right; width: 295px; height: 80px; }
+.tNav ul li{ float: left; line-height: 80px; padding-right: 40px; box-sizing: border-box; }
+.tNav ul .last{ padding-right: 0; }
+.tNav a{ font-size: 16px; color: #333; }
+.hBottom{ width: 100%; min-width: 1180px; height: 80px; }
+.gnb{ width: 1180px; height: 80px; margin: 0 auto; }
+.gnb h1{ width: 52px; height: 75px; background-image: url(../images/common/gnb_fixed_logo.png); background-repeat: no-repeat; background-position: center; background-size: cover; }
+.gnb a{ font-size: 20px; color: #333; }
+.gnb > ul > li{ position: relative; float: left; line-height: 80px; margin: 0 30px; box-sizing: border-box; }
+.gnb > ul > li:nth-child(4){ margin-right: 130px; box-sizing: border-box; }
+.gnb > ul > li:nth-child(5){ margin: 0; }
+.gnb > ul > li:nth-child(6){ margin-left: 130px; box-sizing: border-box; }
+.gnb > ul > li:before{ position: relative; top: -3px; left: -30px; content: '|'; font-size: 13px; color: #333; }
+.gnb > ul > li:nth-child(1):before{ content: ''; }
+.gnb > ul > li:nth-child(5):before{ content: ''; }
+.gnb > ul > li:nth-child(6):before{ content: ''; }
+.gnb .mainNav{ font-size: 20px; }
+.gnb .subNav a{ display: block; font-size: 18px; color: #222; }
+.gnb .subNav{ display: none; position: absolute; top: 80px; left: calc(50% - 170px); width: 350px; height: 60px; text-align: center; line-height: 60px; }
+.gnb .customer{ position: absolute; top: 80px; left: calc(50% - 185px); }
+.gnb .introduce{ position: absolute; top: 80px; left: calc(50% - 170px); }
+.gnb .subNav li{ display: inline-block; height: 100%; margin-right: 40px; }
+.gnb .subNav li:last-child{ margin-right: 0; }
+.subBg{ position: absolute; top: 160px; left: 0; width: 100%; min-width: 1180px; height: 60px; background-color: #000; opacity: 0.2; }
+.gnb li:hover .mainNav:after{ transform: scaleX(1); }
+.mainNav:after{  position: absolute; bottom: 2px; left: 3.5px; display: block; width: 100%; height: 100%; border-bottom: 4px solid #24125f; box-sizing: border-box; transform: scaleX(0); transition: 0.3s; content: ''; z-index: 1002; }
+.subNav a:hover{ color: #24125f; font-weight: 700; }
+#headerLine{ position: absolute; top: 220px; width: 100%; min-width: 1180px; height: 5px; background-color: #24125f; }
+
+/* subContents */
+#subContents{ width: 1180px; overflow: hidden; padding: 320px 0 150px; box-sizing: border-box; margin: 0 auto; }
+
+/*mainMenu*/
+#mainMenu{ width: 1180px; margin-bottom: 40px; box-sizing: border-box; }
+#mainMenu h2{ font-size: 46px; font-weight: 700; color: #222; }
+#subMenu{ width: 1180px; height: 80px; margin-bottom: 100px; box-sizing: border-box; }
+#subMenu ul{ display: flex; width: 100%; height: 100%; }
+#subMenu li{ flex: 1; width: 33.3%; border: 1px solid #999; box-sizing: border-box; }
+#subMenu .first{ border-right: none; }
+#subMenu .middle{ border-right: none; }
+#subMenu a{ display: block; width: 100%; text-align: center; line-height: 80px; font-size: 24px; color: #333; }
+#subMenu .out { border-bottom: 2px solid #24125f; }
+#subMenu .first.active{ border: none; border-left: 2px solid #24125f; border-right: 2px solid #24125f; border-top: 2px solid #24125f; }
+#subMenu .middle.active{ border: none; border-left: 2px solid #24125f; border-right: 2px solid #24125f; border-top: 2px solid #24125f; }
+#subMenu .last.active{ border: none; border-left: 2px solid #24125f; border-right: 2px solid #24125f; border-top: 2px solid #24125f; }
+
+
+
+
+
+

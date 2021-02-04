@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*titleBox*/
+#titleBox{ width: 100%; min-width: 1180px; height: 600px; margin-top: 220px; box-sizing: border-box; background-image: url(../images/movie/titleBox_bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; }
+#titleBox .titleWrap{ width: 1180px; padding: 80px 0; box-sizing: border-box; margin: 0 auto; }
+#titleBox .title{ float: left; width: 500px; height: 440px; }
+#titleBox .posterImg{ float: right; width: 340px; height: 440px; border-radius: 10px; box-shadow: 5px 5px 5px rgba(0,0,0,0.3); }
+#titleBox .name{ width: 500px; height: 120px; font-size: 60px; color: #ebebeb; font-weight: 700; }
+#titleBox .title .middle{ width: 500px; height: 220px; }
+#titleBox .title .bottom{ width: 500px; height: 100px; }
+#titleBox .rate h4, #titleBox .grade h4{ font-size: 25px; border-bottom: 2px solid #fff; color: #ebebeb; }
+#titleBox .rate p, #titleBox .grade p{ font-size: 30px; color: #ebebeb; }
+#titleBox .middle li{ float: left; width: 110px; height: 50px; padding-left: 20px; box-sizing: border-box; border: 1px solid #fff; border-radius: 10px; }
+#titleBox .middle .share{ width: 150px; }
+#titleBox .like{ margin-right: 20px; box-sizing: border-box; }
+#titleBox .middle a{ display: block; text-align: center; line-height: 48px; font-size: 20px; color: #ebebeb; background-repeat: no-repeat; background-position: left; background-size: 20px;  }
+#titleBox .like a{ background-image: url(../images/movieDetail/like_icon_out.png); }
+#titleBox .share a{ background-image: url(../images/movieDetail/share_icon_out.png); }
+#titleBox .bottom li{ float: left; width: 120px; height: 100px; }
+#titleBox .bottom h4{ padding-bottom: 10px; box-sizing: border-box; }
+#titleBox .rate{ margin-right: 20px; box-sizing: border-box; }
+#titleBox .middle li.first:hover{ background-color: #fff; }
+#titleBox .middle li.first:hover a{ color: #333; }
+#titleBox .middle li:hover{ background-color: #fff; }
+#titleBox .middle li:hover a{ color: #333; }
+#titleBox .like:hover a{ background-image: url(../images/movieDetail/like_icon_over.png); }
+#titleBox .share:hover a{ background-image: url(../images/movieDetail/share_icon_over.png); }
+#titleBox .like a.active{ background-image: url(../images/movieDetail/like_icon_active.png); color: #333; }
+#titleBox .like.active{ background-color: #fff; }
+
+/*descriptBox*/
+#descriptBox{ width: 100%; min-width: 1180px; height: 1550px; }
+#descriptBox .infoBox{ width: 1180px; height: 480px; margin: 0 auto; }
+#descriptBox .trailerBox{ width: 100%; min-width: 1180px; height: 550px; margin: 0 auto; background-image: url(../images/movieDetail/trailer_bg.jpg); background-repeat: no-repeat; background-position: bottom; background-size: cover; }
+#descriptBox h3{ width: 1180px; height: 100px; line-height: 100px; font-size: 30px; color: #333; margin: 0 auto; }
+#descriptBox .trailerBox h3{ color: #fff; }
+#descriptBox .infoBox p{ line-height: 32px; font-size: 18px; color: #333; }
+#descriptBox .descript{ margin-bottom: 30px; box-sizing: border-box; font-size: 20px; }
+#descriptBox .imgBox{ width: 1180px; height: 520px; margin: 0 auto; }
+#descriptBox .trailer{ position: relative; left: 50%; transform: translateX(-50%); border: 5px solid #fff; border-radius: 10px; }
+#descriptBox .imgBox li{ float: left; padding-top: 20px; padding-left: 70px; box-sizing: border-box; }
+#descriptBox .imgBox li:first-child{ padding-left: 0; }
+#descriptBox .imgBox img{ width: 346px; height: auto; }

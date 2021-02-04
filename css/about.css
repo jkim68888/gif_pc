@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.bg{ position: relative; width: 1180px; height: 800px; margin-bottom: 100px; box-sizing: border-box; background-color: #000; }
+.content{ width: 1180px; height: 800px; background-image: url(../images/introduce/about_bg01.jpg); background-size: cover; background-repeat: no-repeat; opacity: 0.6; }
+.text{ position: absolute; top: 0; left: 0; width: 1180px; height: 800px; z-index: 1; }
+.text h3{ width: 300px; padding: 100px 0 20px; margin: 0 auto 80px; box-sizing: border-box; border-bottom: 3px solid #ebebeb; text-align: center; font-size: 26px; font-weight: 700; color: #ebebeb; opacity: 0; }
+.text p{ margin-bottom: 30px; box-sizing: border-box; text-align: center; line-height: 32px; font-size: 16px; font-weight: 400; color: #ededed; opacity: 0; }
+.text h3.active{ opacity: 1; transition: 0.6s; transition-delay: 0.3s; }
+.text .first.active{ opacity: 1; transition: 0.6s; transition-delay: 0.6s; }
+.text .middle.active{ opacity: 1; transition: 0.6s; transition-delay: 0.9s; }
+.text .last.active{ opacity: 1; transition: 0.6s; transition-delay: 1.2s; }

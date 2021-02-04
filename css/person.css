@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+#personBox{ width: 100%; height: 600px; } 
+#personBox form{ position: relative; width: 100%; height: 100%; padding: 20px 30px; box-sizing: border-box; }
+#personBox .star{ position: relative; top: 3px; left: -3px; font-size: 14px; color: #24125f; font-weight: 700; }
+#personBox table{ width: 100%; border-top: 1px solid #333; }
+#personBox .subscript{ position: absolute; top: 30px; right: 35px; display: inline; font-size: 14px; }
+#personBox caption{ width: 100%; height: 40px; margin-bottom: 20px; font-size: 24px; line-height: 40px; color: #333; font-weight: 500; text-align: left; }
+#personBox th{ width: 25%; height: 50px; background-color: #ededed; border-bottom: 1px solid #fff; text-align: left; padding-left: 30px; box-sizing: border-box; font-size: 16px; font-weight: 500; }
+#personBox td{ width: 75%; height: 50px; border-bottom: 1px solid #ccc; padding-left: 10px; box-sizing: border-box; }
+#personBox label{ font-size: 14px; }
+#personBox .title{ font-size: 16px; font-weight: 500; }
+#personBox .nameBox{ width: 200px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; }
+#personBox .titleBox{ width: 700px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; }
+#personBox .cBox{ width: 700px; height: 250px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; }
+#personBox .phoneBox{ width: 80px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 5px; margin-top: 10px; }
+#personBox .last{ border-bottom: 1px solid #333; }
+#personBox .btnWrap{ width: 100%; padding: 40px 0; text-align: center; }
+#personBox button{ width: 140px; height: 40px; border: none; border-radius: 5px; background-color: #24125f; color: #fff; font-size: 16px; font-weight: 500; }
+#personBox button:hover{ border: 1px solid #24125f; background-color: #fff; color: #24125f; }
+#personBox .last{ height: 300px; }
