@@ -3,9 +3,23 @@
 #eventSub{ width: 1180px; height: 1500px; }
 #eventSub ul{ display: flex; flex-wrap: wrap; justify-content: space-between; }
 #eventSub li{ flex: 0 25%; }
-#eventSub .blackBg{ width: 300px; height: 410px; border-radius: 15px; background-color: #000; }
+#eventSub .imgBg{ position: relative; width: 300px; height: 410px; background-color: #000; }
 #eventSub a{ display: block; width: 300px; height: 530px; }
-#eventSub img{ border-radius: 15px; }
 #eventSub a:hover img{ opacity: 0.4; }
 #eventSub h3{ width: 300px; margin-top: 10px; box-sizing: border-box; text-align: center; font-size: 22px; color: #333; }
 #eventSub p{ width: 300px; line-height: 36px; text-align: center; font-size: 16px; color: #333; }
+#eventSub li .gobtn{ position: absolute; top: calc(50% - 30px); left: calc(50% - 70px); z-index: 100; display: block; width: 140px; height: 45px; text-align: center; line-height: 43px; color: #fff; border-bottom: 2px solid #fff; font-size: 24px; opacity: 0; transition: 0.4s; }
+#eventSub li .tline{ position: absolute; top: 0; right: 0; width: 0; height: 3px; background-color: #24125f; transition: 0.4s; }
+#eventSub li .bline{ position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background-color: #24125f; transition: 0.4s; }
+#eventSub li .lline{ position: absolute; top: 0; left: 0; width: 3px; height: 0; background-color: #24125f; transition: 0.4s; }
+#eventSub li .rline{ position: absolute; bottom: 0; right: 0; width: 3px; height: 0; background-color: #24125f; transition: 0.4s; }
+#eventSub li a:hover .gobtn{ opacity: 1; }
+#eventSub li a:hover .tline{ width: 300px; }
+#eventSub li a:hover .bline{ width: 300px; }
+#eventSub li a:hover .lline{ height: 410px; }
+#eventSub li a:hover .rline{ height: 410px; }
+
+
+
+
+
