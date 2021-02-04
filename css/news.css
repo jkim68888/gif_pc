@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* 뉴스 목록 */
+#newsBox .noticeTable{ position: relative; width: 100%; }
+
+#newsBox .noticeTable .page{ height: 30px; margin-bottom: 20px; line-height: 30px; }
+#newsBox .noticeTable .page span{ font-size: 16px; }
+#newsBox .noticeTable .page .total{ margin-right: 20px; }
+#newsBox .noticeTable .page .total:after{ position: relative; top: -2px; left: 10px; content: '|'; font-size: 12px; color: #999; }
+#newsBox .noticeTable .page b, .noticeTable .page strong{ color: #333; font-size: 16px; }
+
+#boardForm{ position: absolute; top: 0; right: 0; }
+#findSelect{ width: 80px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; }
+#searchBox{ width: 200px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; }
+#searchBtn{ width: 60px; height: 30px; border: none; box-sizing: border-box; background-color: #24125f; color: #fff; }
+
+#newsBox .noticeTable table{ width: 100%; margin-bottom: 50px; }
+#newsBox .noticeTable caption{ position: absolute; left: -999em; }
+#newsBox .noticeTable th{ background-color: #ededed; border-right: none; }
+#newsBox .noticeTable td{ border-right: none; padding: 15px; }
+#newsBox .noticeTable td a{ font-size: 16px; }
+#newsBox .noticeTable td a:hover{ text-decoration: underline; color: #24125f; }
+
+#newsBox .noticeTable .pageBtn{ position: relative; width: 100%; }
+#newsBox .noticeTable .pageNum{ width: 100%; height: 40px; text-align: center; line-height: 40px; }
+#newsBox .noticeTable .pageNum > *{ margin: 0 5px; }
+#newsBox .noticeTable .pageNum > b{ color: #333; }
+
+#newsBox .noticeTable .btnWrap{ position: absolute; top: 0; right: 0; }
+#newsBox .noticeTable .btnWrap a{ display: inline-block; width: 80px; height: 40px; border: 1px solid #24125f; box-sizing: border-box; text-align: center; line-height: 38px; color: #24125f; font-weight: 500; }
+#newsBox .noticeTable .btnWrap a.writeBtn{ background-color: #24125f; color: #fff; }
+
+/* 타이틀 텍스트 */
+#newsBox h4{
+    width: 300px; height: 45px; line-height: 45px;
+    font-size: 32px; font-weight: 700; color: #333;
+    background-image: url(../images/sub/h4_title_icon.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+#newsBox h5{
+    font-size: 24px; font-weight: 700; color: #024638;
+}
+#newsBox p{
+    font-size: 16px; line-height: 24px; color: #666;
+}
+
+
+/* 표스타일 */
+#newsBox th{
+    padding: 10px; box-sizing: border-box;
+    border-top: 2px solid #024638; border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #ededed;
+    color: #333; font-size: 18px;
+}
+#newsBox td{
+    padding: 10px; box-sizing: border-box;
+    border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;
+    color: #666; font-size: 16px; text-align: center;
+}
+#newsBox table .first{ font-weight: 700; color: #333; }
+#newsBox table .last{ border-right: none; }
+
+
+/* 뉴스 글쓰기 */
+#boardWrite{ width: 100%; overflow: hidden; }
+#boardWrite table{ width: 100%; margin-bottom: 50px;  }
+#boardWrite caption{ position: absolute; left: -999em; }
+#boardWrite th{ width: 15%; border-top: none;  }
+#boardWrite td{ border-top: none; text-align: left; }
+#boardWrite .top th, #boardWrite .top td{ border-top: 2px solid #24125f; }
+#boardWrite th label{ font-size: 18px; color: #333; }
+#noticeTitle{ width: 100%; height: 40px; padding: 0 10px; border: 1px solid 666; box-sizing: border-box; }
+#noticeContent{ width: 100%; padding: 10px; border: 1px solid 666; box-sizing: border-box; resize: none; }
+#boardWrite .btnWrap{ width: 100%; text-align: center; }
+#boardWrite .btnWrap > *{ display: inline-block; width: 80px; height: 40px; border: 1px solid #24125f; box-sizing: border-box; text-align: center; line-height: 38px; color: #24125f; font-weight: 500; }
+#boardWrite .btnWrap > .submitBtn{ background-color: #24125f; color: #fff; }
+
+
+/* 뉴스 글보기 */
+.noticeView{ width: 100%; margin-bottom: 50px; }
+.noticeView caption{ position: absolute; left: -999em; }
+#newsBox .noticeView th{ width: 15%; border-top: none;  }
+#newsBox .noticeView td{ border-top: none; text-align: left; }
+#newsBox .noticeView .top th, #newsBox .noticeView .top td{ border-top: 2px solid #24125f; }
+.noticeView + .btnWrap{ width: 100%; text-align: center; }
+.noticeView + .btnWrap > *{ display: inline-block; width: 80px; height: 40px; border: 1px solid #24125f; box-sizing: border-box; text-align: center; line-height: 38px; color: #24125f; font-weight: 500; }
+.noticeView + .btnWrap > .modifyBtn{ background-color: #24125f; color: #fff; }
+.noticeView + .btnWrap > .deleteBtn{ background-color: #d80707; color: #fff; border: 1px solid #d80707; }

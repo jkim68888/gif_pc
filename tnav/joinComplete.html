@@ -88,93 +88,24 @@
             </div>
         </header>
         <div id="headerLine"></div>
-        <div id="joinBox">
+        <div id="subContents">
             <h2>회원가입</h2>
-            <form action="#">
-                <p class="subscript">
-                    <span class="star">*</span>
-                    필수입력항목
+            <div class="joinFlow">
+                <ul>
+                    <li class="active">01<br>회원약관동의</li>
+                    <li class="active">02<br>회원정보등록</li>
+                    <li class="active">03<br>회원가입완료</li>
+                </ul>
+            </div>
+            <div class="joinClause">
+                <p class="numTop">03</p>
+                <h4>회원가입이 <span class="orange big">완료</span>되었습니다.</h4>
+                <p class="complete">
+                    G.I.F의 회원이 되신 것을 환영합니다.<br>
+                    이제 G.I.F의 다양한 혜택을 마음껏 즐겨보세요.
                 </p>
-                <table>
-                    <caption>정보입력란</caption>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="name" class="title">이름</label>
-                        </th>
-                        <td>
-                            <input type="text" id="name" placeholder="이름을 입력해주세요." class="nameBox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="id" class="title">아이디</label>
-                        </th>
-                        <td>
-                            <input type="text" id="id" placeholder="아이디를 입력해주세요." class="nameBox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="phone01" class="title">휴대폰</label>
-                        </th>
-                        <td>
-                            <select id="phone01" class="phoneBox">
-                                <option>010</option>
-                                <option>011</option>
-                                <option>016</option>
-                                <option>017</option>
-                                <option>018</option>
-                                <option>019</option>
-                            </select>
-                            -
-                            <input type="text" id="phone02" maxlength="4" class="phoneBox">
-                            <label for="phone02" class="away">휴대폰 가운데 4자리입력</label>
-                            -
-                            <input type="text" id="phone03" maxlength="4" class="phoneBox">
-                            <label for="phone03" class="away">휴대폰 마지막 4자리입력</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            생년월일
-                        </th>
-                        <td class="birth">
-                            <select id="birthYear" class="box02"></select>
-                            <label for="birthYear">년</label>
-                            <select id="birthMonth" class="box03"></select>
-                            <label for="birthMonth">월</label>
-                            <select id="birthDate" class="box03"></select>
-                            <label for="birthDate">일</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="pw" class="title">비밀번호</label>
-                        </th>
-                        <td>
-                            <input type="password" id="pw" placeholder="비밀번호를 입력해주세요." class="pwBox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="pwchk" class="title">비밀번호 확인</label>
-                        </th>
-                        <td>
-                            <input type="password" id="pwchk" placeholder="비밀번호를 다시 입력해주세요." class="pwBox">
-                        </td>
-                    </tr>
-                </table>
-                <div class="btnWrap">
-                    <input type="button" value="회원가입" id="joinBtn">
-                    <label for="joinBtn" class="away">회원가입버튼</label>
-                </div>
-            </form>
+                <a href="login.html" class="loginBtn">로그인</a>
+            </div>
         </div>
         <footer>
             <div class="wrap">

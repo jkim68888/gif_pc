@@ -17,6 +17,7 @@
         <script src="../js/common.js"></script>
         <script src="../js/sub.js"></script>
         <script src="../js/join.js"></script>
+        <script src="http://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     </head>
     <body>
         <header>
@@ -88,93 +89,164 @@
             </div>
         </header>
         <div id="headerLine"></div>
-        <div id="joinBox">
+        <div id="subContents">
             <h2>회원가입</h2>
-            <form action="#">
-                <p class="subscript">
-                    <span class="star">*</span>
-                    필수입력항목
-                </p>
-                <table>
-                    <caption>정보입력란</caption>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="name" class="title">이름</label>
-                        </th>
-                        <td>
-                            <input type="text" id="name" placeholder="이름을 입력해주세요." class="nameBox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="id" class="title">아이디</label>
-                        </th>
-                        <td>
-                            <input type="text" id="id" placeholder="아이디를 입력해주세요." class="nameBox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="phone01" class="title">휴대폰</label>
-                        </th>
-                        <td>
-                            <select id="phone01" class="phoneBox">
-                                <option>010</option>
-                                <option>011</option>
-                                <option>016</option>
-                                <option>017</option>
-                                <option>018</option>
-                                <option>019</option>
-                            </select>
-                            -
-                            <input type="text" id="phone02" maxlength="4" class="phoneBox">
-                            <label for="phone02" class="away">휴대폰 가운데 4자리입력</label>
-                            -
-                            <input type="text" id="phone03" maxlength="4" class="phoneBox">
-                            <label for="phone03" class="away">휴대폰 마지막 4자리입력</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            생년월일
-                        </th>
-                        <td class="birth">
-                            <select id="birthYear" class="box02"></select>
-                            <label for="birthYear">년</label>
-                            <select id="birthMonth" class="box03"></select>
-                            <label for="birthMonth">월</label>
-                            <select id="birthDate" class="box03"></select>
-                            <label for="birthDate">일</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="pw" class="title">비밀번호</label>
-                        </th>
-                        <td>
-                            <input type="password" id="pw" placeholder="비밀번호를 입력해주세요." class="pwBox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <span class="star">*</span>
-                            <label for="pwchk" class="title">비밀번호 확인</label>
-                        </th>
-                        <td>
-                            <input type="password" id="pwchk" placeholder="비밀번호를 다시 입력해주세요." class="pwBox">
-                        </td>
-                    </tr>
-                </table>
-                <div class="btnWrap">
-                    <input type="button" value="회원가입" id="joinBtn">
-                    <label for="joinBtn" class="away">회원가입버튼</label>
-                </div>
-            </form>
+            <div class="joinFlow">
+                <ul>
+                    <li class="active">01<br>회원약관동의</li>
+                    <li class="active">02<br>회원정보등록</li>
+                    <li>03<br>회원가입완료</li>
+                </ul>
+            </div>
+            <div class="joinClause">
+                <p class="numTop">02</p>
+                <h4>기본정보 (<span class="orange">*</span>는 필수 정보입니다)</h4>
+                <form name="join_form" id="joinForm" method="post" action="#">
+                    <table>
+                        <caption>회원정보</caption>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                <label for="joinName">이름</label>
+                            </th>
+                            <td>
+                                <input type="text" name="name" id="joinName" class="box01">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                <label for="joinId">아이디</label>
+                            </th>
+                            <td>
+                                <input type="text" name="id" id="joinId" class="box01" maxlength="20">
+                                <button type="button" id="checkId">중복확인</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                <label for="joinPw">비밀번호</label>
+                            </th>
+                            <td>
+                                <input type="password" name="pass" id="joinPw" class="box01" maxlength="20">
+                                ※ 공백없이 영문(소), 숫자 6~20자 사용가능
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                <label for="joinPwChk">비밀번호</label>
+                            </th>
+                            <td>
+                                <input type="password" name="passchk" id="joinPwChk" class="box01" maxlength="20">
+                                <span class="red">비밀번호가 같지 않습니다.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                생년월일
+                            </th>
+                            <td>
+                                <select name="birth01" id="birth01" class="box02"></select>
+                                <label for="birth01">년</label>
+                                <select name="birth02" id="birth02" class="box02"></select>
+                                <label for="birth02">월</label>
+                                <select name="birth03" id="birth03" class="box02"></select>
+                                <label for="birth03">일</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                <label for="postNum">주소</label>
+                            </th>
+                            <td>
+                                <input type="text" name="post" id="postNum" class="box01" maxlength="5">
+                                <button type="button" id="postBtn" onclick="sample2_execDaumPostcode()">우편번호찾기</button>
+                                <br>
+                                <input type="text" name="addr01" id="addr01" class="box01">
+                                <label for="addr01" class="away">주소입력상자</label>
+                                <input type="text" name="addr02" id="addr02" class="box01" placeholder="나머지 주소를 입력하세요.">
+                                <label for="addr02" class="away">나머지주소입력상자</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                <label for="phone01">휴대폰</label>
+                            </th>
+                            <td>
+                                <label for="phone02" class="away">휴대폰두번째입력상자</label>
+                                <label for="phone03" class="away">휴대폰세번째입력상자</label>
+                                <select name="phone01" id="phone01" class="box02">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                -
+                                <input type="text" id="phone02" class="box02" maxlength="4">
+                                -
+                                <input type="text" id="phone03" class="box02" maxlength="4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                SMS 수신여부
+                            </th>
+                            <td>
+                                <input type="radio" name="smsreception" id="smsYes" checked>
+                                <label for="smsYes">수신</label>
+                                <input type="radio" name="smsreception" id="smsNo">
+                                <label for="smsNo">수신하지 않음</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="orange">*</span>
+                                <label for="email01">이메일</label>
+                            </th>
+                            <td>
+                                <label for="email02" class="away">이메일직접입력</label>
+                                <label for="email03" class="away">이메일선택상자</label>
+                                <input type="text" name="email01" id="email01" class="box03">
+                                <span class="at">@</span>
+                                <input type="text" name="email02" id="email02" class="box03" placeholder="직접입력">
+                                <select name="email03" id="email03" class="box03">
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="google.com">google.com</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="last">
+                                <span class="orange">*</span>
+                                이메일 수신여부
+                            </th>
+                            <td class="last">
+                                <input type="radio" name="emailreception" id="emailYes" checked>
+                                <label for="emailYes">수신</label>
+                                <input type="radio" name="emailreception" id="emailNo">
+                                <label for="emailNo">수신하지 않음</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btnWrap">
+                        <button type="submit">회원가입</button>
+                        <button type="reset">입력취소</button>
+                    </div>
+                    <div id="layer">
+                        <img src="http://t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" onclick="closeDaumPostcode()" alt="닫기 버튼">
+                    </div>
+                    <script src="../js/post.js"></script>
+                </form>
+            </div>
         </div>
         <footer>
             <div class="wrap">

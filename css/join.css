@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
 /* join common */
-.joinFlow{ width: 100%; overflow: hidden; padding: 80px 0; }
+#subContents h2{ width: 180px; margin: 0 auto; box-sizing: border-box; font-size: 48px; font-weight: 700; color: #222; }
+.joinFlow{ width: 100%; overflow: hidden; padding: 100px 0; }
 .joinFlow li{ position: relative; float: left; width: 33.33%; height: 90px; border-top: 2px solid #999; padding-top: 15px; box-sizing: border-box; color: #666; font-size: 18px; font-weight: 700; }
 .joinFlow li:before{ content: ''; position: absolute; top: -5px; left: 0; display: block; width: 8px; height: 8px; border-radius: 4px; background-color: #666; }
 .joinFlow li.active{ border-top: 2px solid #24125f; color: #24125f; }
 .joinFlow li.active:before{ background-color: #24125f; }
-
 #subContents p.numTop{ margin-bottom: 30px; color: #999; font-size: 24px; font-weight: 700; text-align: center; }
-
 .bottomList{ width: 100%; overflow: hidden; }
 .bottomList h6{ margin-bottom: 8px; font-size: 20px; color: #333; }
 #subContents .bottomList p{ margin-bottom: 8px; }
@@ -49,7 +48,7 @@
 .joinClause .box02 + label{ position: relative; left: -5px; margin-right: 10px; }
 .joinClause .at{ position: relative; left: -4px; }
 .joinClause .box03{ width: 130px; height: 40px; padding: 0 10px; border: 1px solid #ccc; box-sizing: border-box; margin-right: 5px; }
-.joinClause table button{ width: 300px; height: 40px; border: none; background-color: #024638; color: #fff; }
+.joinClause table button{ width: 300px; height: 40px; border: none; background-color: #24125f; color: #fff; }
 .joinClause table .red{ display: none; font-size: 16px; color: #ff0000; }
 #postNum{ margin-bottom: 10px; }
 .joinClause input[type=radio]{ margin: 13px 0; }
