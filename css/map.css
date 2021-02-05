@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#subContents h3{ padding-left: 90px; margin-bottom: 50px; box-sizing: border-box; font-size: 40px; font-weight: 700; color: #24125f; }
+#subBox h3{ padding-left: 90px; margin-bottom: 50px; box-sizing: border-box; font-size: 40px; font-weight: 700; color: #24125f; }
 #map{ width: 1000px; height: 500px; margin: 0 auto 40px; box-sizing: border-box; border: 3px solid #24125f; border-radius: 20px; }
 .mapWrap{ width: 1000px; margin: 0 auto 100px; }
 .mapWrap > ul > li{ font-size: 16px; color: #333; }

@@ -23,7 +23,7 @@ $(document).ready(function(){
                         var $rate = currentMovieData[movieIndex].rate;
                         var $grade = currentMovieData[movieIndex].grade;
                         var a = $('<a class="viewMore" />');
-                        a.attr('href', 'currentDetail.html?movieIndex=' + movieIndex);
+                        a.attr('href', 'currentDetail.php?movieIndex=' + movieIndex);
                         
                         li.append(
                             $(img).append($('<img />').attr({
