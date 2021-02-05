@@ -89,16 +89,16 @@
                 <div class="title">
                     <h2>로그인</h2>
                 </div>
-                <form action="#">
+                <form name="member_form" method="post" action="log_in.php">
                     <ul class="first">
                         <li>
                             <ul class="inputBox">
                                 <li>
-                                    <input type="text" id="id" placeholder="아이디를 입력해주세요." class="box">
+                                    <input type="text" name="id" id="id" placeholder="아이디를 입력해주세요." class="box">
                                     <label for="id" class="away">아이디 입력</label>
                                 </li>
                                 <li>
-                                    <input type="text" id="pw" placeholder="비밀번호를 입력해주세요." class="box">
+                                    <input type="password" name="pass" id="pw" placeholder="비밀번호를 입력해주세요." class="box">
                                     <label for="pw" class="away">비밀번호 입력</label>
                                 </li>
                             </ul>
@@ -109,7 +109,7 @@
                     </ul>
                     <ul class="last">
                         <li class="chkBox">
-                            <input type="checkbox" id="chk" checked>
+                            <input type="checkbox" name="chk" id="chk" checked>
                             <label for="chk">아이디 저장</label>
                         </li>
                         <li class="search underline"><a href="#">아이디/비밀번호 찾기</a></li>

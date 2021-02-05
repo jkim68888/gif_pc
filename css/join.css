@@ -56,7 +56,7 @@
 .joinClause .btnWrap{ width: 100%; margin-bottom: 50px; text-align: center; }
 .joinClause .btnWrap button{ width: 300px; height: 50px; border: none; color: #fff; font-size: 20px; font-weight: 500; }
 .joinClause .btnWrap button[type=submit]{ background-color: #24125f; }
-.joinClause .btnWrap button[type=reset]{ background-color: #666; }
+.joinClause .btnWrap button[type=button]{ background-color: #666; }
 
 /* 우편번호 */
 #layer{ display:none; position:fixed; overflow:hidden; z-index:1; -webkit-overflow-scrolling:touch; }

@@ -3,8 +3,8 @@
 /* header */
 header{ width: 100%; min-width: 1180px; height: 120px; transition: 0.3s; }
 .hTop{ width: 1180px; height: 80px; margin: 0 auto; }
-.tNav{ float: right; width: 295px; height: 80px; }
-.tNav ul li{ float: left; line-height: 80px; padding-right: 40px; box-sizing: border-box; }
+.tNav{ float: right; width: 305px; height: 80px; }
+.tNav ul li{ float: left; line-height: 80px; padding-right: 30px; box-sizing: border-box; color: #333; }
 .tNav ul .last{ padding-right: 0; }
 .tNav a{ font-size: 16px; color: #333; }
 .hBottom{ width: 100%; min-width: 1180px; height: 80px; }

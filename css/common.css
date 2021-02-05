@@ -17,8 +17,8 @@ label.away{ position: absolute; left: -999em; }
 /* header */
 header{ position: absolute; top: 0; left: 0; width: 100%; min-width: 1180px; height: 120px; z-index: 1000; transition: 0.3s; }
 .hTop{ width: 1180px; height: 40px; margin: 0 auto; }
-.tNav{ float: right; width: 295px; height: 40px; }
-.tNav ul li{ float: left; line-height: 40px; padding-right: 40px; box-sizing: border-box; }
+.tNav{ float: right; width: 305px; height: 40px; }
+.tNav ul li{ float: left; line-height: 40px; padding-right: 30px; box-sizing: border-box; color: #fff; }
 .tNav ul .last{ padding-right: 0; }
 .tNav a{ font-size: 16px; color: #fff; }
 .hBottom{ width: 100%; min-width: 1180px; height: 80px; }

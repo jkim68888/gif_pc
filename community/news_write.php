@@ -232,6 +232,8 @@
                 </div>
             </form>
         </div>
+            </div>
+        </div>
         <footer>
             <div class="wrap">
                 <h1>

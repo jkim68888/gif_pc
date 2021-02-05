@@ -377,7 +377,7 @@
                     </table>
                     <div class="btnWrap">
                         <button type="submit" id="submitBtn02">정보수정</button>
-                        <button type="reset">입력취소</button>
+                        <button type="button" onClick="history.go(-1)">입력취소</button>
                     </div>
                     <div id="layer">
                         <img src="http://t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" onclick="closeDaumPostcode()" alt="닫기 버튼">

@@ -11,7 +11,7 @@
     }else{ //로그인을 했다면
         ?>
         <ul>
-            <li><?=$username?>(<?=$userid?>)님 안녕하세요!</li>
+            <li><?=$username?>님</li>
             <!--로그아웃클릭하면 log_out.php로 가서 로그아웃이 처리-->
             <li><a href="/tnav/log_out.php">로그아웃</a></li>
             <li><a href="/tnav/join_form_modify.php">회원정보 수정</a></li>
