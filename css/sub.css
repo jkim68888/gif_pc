@@ -33,7 +33,7 @@ header{ width: 100%; min-width: 1180px; height: 120px; transition: 0.3s; }
 #headerLine{ position: absolute; top: 220px; width: 100%; min-width: 1180px; height: 5px; background-color: #24125f; }
 
 /* subContents */
-#subContents{ width: 1180px; overflow: hidden; padding: 320px 0 150px; box-sizing: border-box; margin: 0 auto; }
+#subBox{ width: 1180px; overflow: hidden; padding: 320px 0 150px; box-sizing: border-box; margin: 0 auto; }
 
 /*mainMenu*/
 #mainMenu{ width: 1180px; margin-bottom: 40px; box-sizing: border-box; }

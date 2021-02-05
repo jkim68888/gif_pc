@@ -1,27 +1,27 @@
 @charset "UTF-8";
 
 /* join common */
-#subContents h2{ width: 180px; margin: 0 auto; box-sizing: border-box; font-size: 48px; font-weight: 700; color: #222; }
+#subBox h2{ width: 180px; margin: 0 auto; box-sizing: border-box; font-size: 48px; font-weight: 700; color: #222; }
 .joinFlow{ width: 100%; overflow: hidden; padding: 100px 0; }
 .joinFlow li{ position: relative; float: left; width: 33.33%; height: 90px; border-top: 2px solid #999; padding-top: 15px; box-sizing: border-box; color: #666; font-size: 18px; font-weight: 700; }
 .joinFlow li:before{ content: ''; position: absolute; top: -5px; left: 0; display: block; width: 8px; height: 8px; border-radius: 4px; background-color: #666; }
 .joinFlow li.active{ border-top: 2px solid #24125f; color: #24125f; }
 .joinFlow li.active:before{ background-color: #24125f; }
-#subContents p.numTop{ margin-bottom: 30px; color: #999; font-size: 24px; font-weight: 700; text-align: center; }
+#subBox p.numTop{ margin-bottom: 30px; color: #999; font-size: 24px; font-weight: 700; text-align: center; }
 .bottomList{ width: 100%; overflow: hidden; }
 .bottomList h6{ margin-bottom: 8px; font-size: 20px; color: #333; }
-#subContents .bottomList p{ margin-bottom: 8px; }
+#subBox .bottomList p{ margin-bottom: 8px; }
 .bottomList a{ display: inline-block; width: 105px; height: 30px; border-bottom: 2px solid #24125f; box-sizing: border-box; color: #24125f;  }
 
 /* joinClause */
 .joinClause{ width: 100%; overflow: hidden; padding: 60px 90px; box-sizing: border-box; margin-bottom: 50px; background-color: #ededed; }
-#subContents .joinClause h4{ width: 100%; margin-bottom: 30px; background-image: none; text-align: center; color: #333; font-size: 24px; }
+#subBox .joinClause h4{ width: 100%; margin-bottom: 30px; background-image: none; text-align: center; color: #333; font-size: 24px; }
 
 
 /* 회원 약관 동의 */
 .joinClause .agreeArea{ width: 100%; height: 300px; margin-bottom: 20px; padding: 20px; box-sizing: border-box; overflow-x: hidden; background-color: #fff; }
-#subContents .joinClause .agreeArea h5{ margin-bottom: 20px; font-size: 20px; color: #333; }
-#subContents .joinClause .agreeArea h6{ margin-bottom: 20px; font-size: 18px; color: #333; }
+#subBox .joinClause .agreeArea h5{ margin-bottom: 20px; font-size: 20px; color: #333; }
+#subBox .joinClause .agreeArea h6{ margin-bottom: 20px; font-size: 18px; color: #333; }
 .joinClause .agreeArea div.agreeP{ margin-bottom: 20px; }
 .joinClause .agreeArea .agreeP{ text-indent: 16px; font-size: 16px;  }
 
@@ -37,9 +37,9 @@
 .joinClause .orange{ color: #24125f; font-size: 16px; }
 .joinClause table{ width: 100%; border-top: 2px solid #24125f; border-bottom: 1px solid #24125f; margin-bottom: 50px; }
 .joinClause caption{ width: 100%; height: 40px; font-size: 20px; color: #333; font-weight: 500; text-align: left; }
-#subContents .joinClause th{ width: 25%; padding: 10px 30px; border-top: none; border-bottom: 1px solid #fff; border-left: none; box-sizing: border-box;  background-color: #ccc; text-align: left; color: #333; font-size: 16px; font-weight: 500; }
-#subContents .joinClause td{ width: 75%; padding: 10px 15px; border-bottom: 1px solid #ccc; border-right: none; box-sizing: border-box; background-color: #fff; text-align: left; }
-#subContents .joinClause .last{ border-bottom: none; }
+#subBox .joinClause th{ width: 25%; padding: 10px 30px; border-top: none; border-bottom: 1px solid #fff; border-left: none; box-sizing: border-box;  background-color: #ccc; text-align: left; color: #333; font-size: 16px; font-weight: 500; }
+#subBox .joinClause td{ width: 75%; padding: 10px 15px; border-bottom: 1px solid #ccc; border-right: none; box-sizing: border-box; background-color: #fff; text-align: left; }
+#subBox .joinClause .last{ border-bottom: none; }
 .joinClause th label{ color: #333; font-size: 16px; font-weight: 500; }
 .joinClause td label{ font-size: 16px; }
 .joinClause th .orange{ position: relative; top: 4px; }
@@ -64,5 +64,5 @@
 
 /* 회원가입완료 */
 .joinClause .orange.big{ font-size: 24px; }
-#subContents p.complete{ margin-bottom: 100px; text-align: center; color: #333; line-height: 50px; font-weight: 500; }
+#subBox p.complete{ margin-bottom: 100px; text-align: center; color: #333; line-height: 50px; font-weight: 500; }
 .joinClause .loginBtn{ display: block; width: 300px; height: 50px; margin: 0 auto 50px; background-color: #24125f; color: #fff; font-size: 20px; font-weight: 500; text-align: center; line-height: 50px; }

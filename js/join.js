@@ -84,7 +84,7 @@ $(document).ready(function(){
 
 //회원가입 전송 미처리 및 데이터 확인
 $(document).ready(function(){
-    $('#joinForm').submit(function(e){
+    $('#join_form').submit(function(e){
         e.preventDefault(); 
     });
     

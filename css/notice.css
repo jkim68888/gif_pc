@@ -1,66 +1,66 @@
 @charset "UTF-8";
 
 /* 공지사항 목록 */
-#noticeBox .noticeTable{ position: relative; width: 100%; }
+#subContents .noticeTable{ position: relative; width: 100%; }
 
-#noticeBox .noticeTable .page{ height: 30px; margin-bottom: 20px; line-height: 30px; }
-#noticeBox .noticeTable .page span{ font-size: 16px; }
-#noticeBox .noticeTable .page .total{ margin-right: 20px; }
-#noticeBox .noticeTable .page .total:after{ position: relative; top: -2px; left: 10px; content: '|'; font-size: 12px; color: #999; }
-#noticeBox .noticeTable .page b, .noticeTable .page strong{ color: #333; font-size: 16px; }
+#subContents .noticeTable .page{ height: 30px; margin-bottom: 20px; line-height: 30px; }
+#subContents .noticeTable .page span{ font-size: 16px; }
+#subContents .noticeTable .page .total{ margin-right: 20px; }
+#subContents .noticeTable .page .total:after{ position: relative; top: -2px; left: 10px; content: '|'; font-size: 12px; color: #999; }
+#subContents .noticeTable .page b, .noticeTable .page strong{ color: #333; font-size: 16px; }
 
 #boardForm{ position: absolute; top: 0; right: 0; }
 #findSelect{ width: 80px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; }
 #searchBox{ width: 200px; height: 30px; border: 1px solid #ccc; box-sizing: border-box; }
 #searchBtn{ width: 60px; height: 30px; border: none; box-sizing: border-box; background-color: #24125f; color: #fff; }
 
-#noticeBox .noticeTable table{ width: 100%; margin-bottom: 50px; }
-#noticeBox .noticeTable caption{ position: absolute; left: -999em; }
-#noticeBox .noticeTable th{ background-color: #ededed; border-right: none; }
-#noticeBox .noticeTable td{ border-right: none; padding: 15px; }
-#noticeBox .noticeTable td a{ font-size: 16px; }
-#noticeBox .noticeTable td a:hover{ text-decoration: underline; color: #24125f; }
+#subContents .noticeTable table{ width: 100%; margin-bottom: 50px; }
+#subContents .noticeTable caption{ position: absolute; left: -999em; }
+#subContents .noticeTable th{ background-color: #ededed; border-right: none; }
+#subContents .noticeTable td{ border-right: none; padding: 15px; }
+#subContents .noticeTable td a{ font-size: 16px; }
+#subContents .noticeTable td a:hover{ text-decoration: underline; color: #24125f; }
 
-#noticeBox .noticeTable .pageBtn{ position: relative; width: 100%; }
-#noticeBox .noticeTable .pageNum{ width: 100%; height: 40px; text-align: center; line-height: 40px; }
-#noticeBox .noticeTable .pageNum > *{ margin: 0 5px; }
-#noticeBox .noticeTable .pageNum > b{ color: #333; }
+#subContents .noticeTable .pageBtn{ position: relative; width: 100%; }
+#subContents .noticeTable .pageNum{ width: 100%; height: 40px; text-align: center; line-height: 40px; }
+#subContents .noticeTable .pageNum > *{ margin: 0 5px; }
+#subContents .noticeTable .pageNum > b{ color: #333; }
 
-#noticeBox .noticeTable .btnWrap{ position: absolute; top: 0; right: 0; }
-#noticeBox .noticeTable .btnWrap a{ display: inline-block; width: 80px; height: 40px; border: 1px solid #24125f; box-sizing: border-box; text-align: center; line-height: 38px; color: #24125f; font-weight: 500; }
-#noticeBox .noticeTable .btnWrap a.writeBtn{ background-color: #24125f; color: #fff; }
+#subContents .noticeTable .btnWrap{ position: absolute; top: 0; right: 0; }
+#subContents .noticeTable .btnWrap a{ display: inline-block; width: 80px; height: 40px; border: 1px solid #24125f; box-sizing: border-box; text-align: center; line-height: 38px; color: #24125f; font-weight: 500; }
+#subContents .noticeTable .btnWrap a.writeBtn{ background-color: #24125f; color: #fff; }
 
 /* 타이틀 텍스트 */
-#noticeBox h4{
+#subContents h4{
     width: 300px; height: 45px; line-height: 45px;
     font-size: 32px; font-weight: 700; color: #333;
     background-image: url(../images/sub/h4_title_icon.png);
     background-repeat: no-repeat;
     background-position: right center;
 }
-#noticeBox h5{
+#subContents h5{
     font-size: 24px; font-weight: 700; color: #024638;
 }
-#noticeBox p{
+#subContents p{
     font-size: 16px; line-height: 24px; color: #666;
 }
 
 
 /* 표스타일 */
-#noticeBox th{
+#subContents th{
     padding: 10px; box-sizing: border-box;
     border-top: 2px solid #024638; border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
     background-color: #ededed;
     color: #333; font-size: 18px;
 }
-#noticeBox td{
+#subContents td{
     padding: 10px; box-sizing: border-box;
     border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;
     color: #666; font-size: 16px; text-align: center;
 }
-#noticeBox table .first{ font-weight: 700; color: #333; }
-#noticeBox table .last{ border-right: none; }
+#subContents table .first{ font-weight: 700; color: #333; }
+#subContents table .last{ border-right: none; }
 
 
 /* 공지사항 글쓰기 */
@@ -81,9 +81,9 @@
 /* 공지사항 글보기 */
 .noticeView{ width: 100%; margin-bottom: 50px; }
 .noticeView caption{ position: absolute; left: -999em; }
-#noticeBox .noticeView th{ width: 15%; border-top: none;  }
-#noticeBox .noticeView td{ border-top: none; text-align: left; }
-#noticeBox .noticeView .top th, #noticeBox .noticeView .top td{ border-top: 2px solid #24125f; }
+#subContents .noticeView th{ width: 15%; border-top: none;  }
+#subContents .noticeView td{ border-top: none; text-align: left; }
+#subContents .noticeView .top th, #subContents .noticeView .top td{ border-top: 2px solid #24125f; }
 .noticeView + .btnWrap{ width: 100%; text-align: center; }
 .noticeView + .btnWrap > *{ display: inline-block; width: 80px; height: 40px; border: 1px solid #24125f; box-sizing: border-box; text-align: center; line-height: 38px; color: #24125f; font-weight: 500; }
 .noticeView + .btnWrap > .modifyBtn{ background-color: #24125f; color: #fff; }
