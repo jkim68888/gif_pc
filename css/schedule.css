@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
-#scheduleBox{ width: 1180px; height: 500px; padding: 50px; box-sizing: border-box; border-radius: 30px; border: 3px solid #24125f; }
-#scheduleBox h3{ padding: 0 20px 60px; box-sizing: border-box; font-size: 24px; font-weight: 700; color: #333; }
-#scheduleBox h4{ margin: 30px 0; box-sizing: border-box; text-align: center; font-size: 20px; font-weight: 700; color: #333; }
-#scheduleBox ul{ display: flex; justify-content: space-between; padding: 30px 200px; box-sizing: border-box; }
-#scheduleBox li{ flex: 1; height: 60px; line-height: 60px; text-align: center; border-radius: 10px; background-color: #24125f; }
-#scheduleBox a{ font-size: 18px; font-weight: 700; color: #fff; }
-#scheduleBox a:before{ content: '|'; position: relative; top: -3px; left: -55px; font-size: 16px; cursor: default; }
-#scheduleBox li:first-child a:before{ content: '';  }
-#scheduleBox li:hover{ background-color: #fff; border: 1px solid #24125f; }
-#scheduleBox li:hover a{ color: #24125f; }
+#scheduleBox{ width: 1180px; height: 1300px; padding: 50px 80px; box-sizing: border-box; border-radius: 30px; border: 3px solid #24125f; }
+#scheduleBox h3{ padding: 0 20px 20px; box-sizing: border-box; font-size: 24px; font-weight: 700; color: #333; }
+#scheduleBox h4{ padding: 50px 35px; box-sizing: border-box; font-size: 24px; font-weight: 700; color: #333; background-image: url(../images/ticket/armchair01.png); background-repeat: no-repeat; background-position: left; background-size: 24px; }
+#scheduleBox .time{ display: flex; justify-content: flex-start; }
+#scheduleBox .time li{ width: 100px; height: 80px; margin-right: 40px; line-height: 80px; background-color: transparent; border: 1px solid #999; font-size: 18px; text-align: center; }
+#scheduleBox .time .type{ width: 102px; height: 82px; padding-top: 10px; margin-right: 150px; box-sizing: border-box; line-height: 30px; border: none; background-color: #ededed; font-weight: 700; color: #24125f; }
