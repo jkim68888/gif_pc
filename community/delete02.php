@@ -35,7 +35,7 @@
     //삭제가 완료되면 목록페이지로 이동
     echo "
         <script>
-            location.href = 'notice.php?table=$table';
+            location.href = 'news.php?table=$table';
         </script>
 	"; 
 

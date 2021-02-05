@@ -1,3 +1,4 @@
+<? include "../lib/session.php" ?>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -22,11 +23,7 @@
         <header>
             <div class="hTop">
                 <div class="tNav">
-                    <ul>
-                        <li><a href="login.php">로그인</a></li>
-                        <li><a href="join.php">회원가입</a></li>
-                        <li class="last"><a href="nonMember.php">비회원 예매확인</a></li>
-                    </ul>
+                    <? include "../lib/top_nav.php"; ?>
                 </div>
             </div>
             <div class="hBottom">
@@ -102,7 +99,7 @@
                 <h4>회원가입이 <span class="orange big">완료</span>되었습니다.</h4>
                 <p class="complete">
                     G.I.F의 회원이 되신 것을 환영합니다.<br>
-                    이제 G.I.F의 다양한 혜택을 마음껏 즐겨보세요.
+                    이제 이연미술관의 다양한 혜택을 마음껏 즐겨보세요.
                 </p>
                 <a href="login.php" class="loginBtn">로그인</a>
             </div>

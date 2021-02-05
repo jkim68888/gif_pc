@@ -1,3 +1,39 @@
+<? 
+    include "../lib/session.php";
+
+    //DB연결
+    include "../lib/dbconn.php";
+    $table = "notice";
+    $mode = $_GET['mode'];
+    $page = 1;
+
+    //수정모드이면 - 데이터를 조회해서 각각 변수에 데이터를 담아라
+    if ($mode == "modify"){
+        $table = $_GET['table'];
+        $num = $_GET['num'];
+        $page = $_GET['page'];
+        
+		$sql = "SELECT * FROM $table WHERE num=$num";
+        
+		$result = mysqli_query($connect, $sql);
+    
+		$row = mysqli_fetch_assoc($result);
+	
+		$item_subject     = $row['subject'];
+		$item_content     = $row['content'];
+		$item_name     = $row['name'];
+        
+        echo $item_name;
+        
+        
+
+		$item_file_0 = $row['file_name_0'];
+		$item_file_1 = $row['file_name_1'];
+
+		$copied_file_0 = $row['file_copied_0'];
+		$copied_file_1 = $row['file_copied_1'];
+	}
+?>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -16,16 +52,13 @@
         <script src="../js/jquery.easing.1.3.js"></script>
         <script src="../js/common.js"></script>
         <script src="../js/sub.js"></script>
+        <script src="write.js"></script>
     </head>
     <body>
         <header>
             <div class="hTop">
                 <div class="tNav">
-                    <ul>
-                        <li><a href="../tnav/login.php">로그인</a></li>
-                        <li><a href="../tnav/join.php">회원가입</a></li>
-                        <li class="last"><a href="../tnav/nonMember.php">비회원 예매확인</a></li>
-                    </ul>
+                    <? include "../lib/top_nav.php"; ?>
                 </div>
             </div>
             <div class="hBottom">
@@ -99,59 +132,105 @@
 				</ul>
             </nav>
             <div id="subContents">
-                <form name="board_form" id="boardWrite" method="post" action="">
-                    <table>
-                        <caption>글쓰기 테이블</caption>
-                        <tr class="top">
-                            <th>작성자</th>
-                            <td>홍길동</td>
-                            <th>HTML 쓰기</th>
-                            <td>
-                                <input type="checkbox" name="html_ok" id="htmlOk" value="y">
-                                <label for="htmlOk">HTML 쓰기</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="noticeTitle">제목</label>
-                            </th>
-                            <td colspan="3">
-                                <input type="text" name="subject" id="noticeTitle">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="noticeContent">내용</label>
-                            </th>
-                            <td colspan="3">
-                                <textarea name="content" id="noticeContent" rows="20"></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="noticeFile01">첨부파일1</label>
-                            </th>
-                            <td colspan="3">
-                                <input type="file" name="upfile[]" id="noticeFile01">
+            <?php
+                //만약 수정모드면
+                if($mode=="modify"){
+            ?>
+                <!--글작성폼 : enctype="multipart/form-data" 파일업로드를 위해 반드시 작성-->
+                <form id="boardWrite" name="board_form" method="post" action="insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>" enctype="multipart/form-data"> 
+
+            <?php
+                }else{//그냥 글쓰기면
+            ?>
+                <form id="boardWrite" name="board_form" method="post" action="insert.php?table=<?=$table?>" enctype="multipart/form-data">
+            <?php
+                }
+            ?> 
+                <table>
+                    <caption>글쓰기 테이블</caption>
+                    <tr class="top">
+                        <th>작성자</th>
+                        <td><?=$username?></td>
+                        <th>HTML 쓰기</th>
+                        <td>
+                            <input type="checkbox" name="html_ok" id="htmlOk" value="y">
+                            <label for="htmlOk">HTML 쓰기</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="noticeTitle">제목</label>
+                        </th>
+                        <td colspan="3">
+                            <?
+                                if($mode == "modify"){
+                            ?>
+                            <input type="text" name="subject" id="noticeTitle" value="<?=$item_subject?>">
+                            <?
+                                }else{
+                            ?>
+                            
+                            <input type="text" name="subject" id="noticeTitle">
+                            <?
+                                }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="noticeContent">내용</label>
+                        </th>
+                        <td colspan="3">
+                            <?
+                                if($mode == "modify"){
+                            ?>
+                            <textarea name="content" id="noticeContent" rows="20"><?=$item_content?></textarea>
+                            <?
+                                }else{
+                            ?>
+                            <textarea name="content" id="noticeContent" rows="20"></textarea>
+                            <?
+                                }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="noticeFile01">첨부파일1</label>
+                        </th>
+                        <td colspan="3">
+                            <input type="file" name="upfile[]" id="noticeFile01">
+                            <? 	
+                                if ($mode=="modify" && $item_file_0){
+                            ?>
                                 <input type="checkbox" name="del_file[]" id="deleteFile01" value="0"> <label for="deleteFile01">삭제</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="noticeFile02">첨부파일2</label>
-                            </th>
-                            <td colspan="3">
-                                <input type="file" name="upfile[]" id="noticeFile02">
+                            
+                            <?
+                                }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="noticeFile02">첨부파일2</label>
+                        </th>
+                        <td colspan="3">
+                            <input type="file" name="upfile[]" id="noticeFile02">
+                            <?	
+                                if ($mode=="modify" && $item_file_0){
+                            ?>
                                 <input type="checkbox" name="del_file[]" id="deleteFile02" value="0"> <label for="deleteFile02">삭제</label>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="btnWrap">
-                        <a href="notice_view.php" class="submitBtn">등록</a>
-                        <a href="notice.php" class="listBtn">목록</a>
-                    </div>
-                </form>
-            </div>
+                            <?
+                                }
+                            ?>
+                        </td>
+                    </tr>
+                </table>
+                <div class="btnWrap">
+                    <a href="#" class="submitBtn" onclick="check_input()">등록</a>
+                    <a href="notice.php?table=<?=$table?>&page=<?=$page?>" class="listBtn">목록</a>
+                </div>
+            </form>
         </div>
         <footer>
             <div class="wrap">

@@ -20,7 +20,7 @@
     include "../lib/dbconn.php";
 
     //현재 아이디와 같은 레코드를 조회
-    $sql = "SELECT * FROM notice WHERE id='$userid'";
+    $sql = "SELECT * FROM news WHERE id='$userid'";
 
     //해당아이디와 맞는 결과레코드(행) 가져오기
     $result = mysqli_query($connect, $sql);
@@ -193,7 +193,7 @@
     //데이터 추가가 완료되면 목록페이지로 이동
     echo "
 	    <script>
-            location.href = 'notice.php?table=$table&page=1';
+            location.href = 'news.php?table=$table&page=1';
 	    </script>
 	";
 ?>

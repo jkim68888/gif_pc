@@ -1,3 +1,4 @@
+<? include "../lib/session.php" ?>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -23,11 +24,7 @@
         <header>
             <div class="hTop">
                 <div class="tNav">
-                    <ul>
-                        <li><a href="../tnav/login.php">로그인</a></li>
-                        <li><a href="../tnav/join.php">회원가입</a></li>
-                        <li class="last"><a href="../tnav/nonMember.php">비회원 예매확인</a></li>
-                    </ul>
+                    <? include "../lib/top_nav.php"; ?>
                 </div>
             </div>
             <div class="hBottom">

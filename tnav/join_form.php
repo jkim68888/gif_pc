@@ -1,3 +1,4 @@
+<? include "../lib/session.php" ?>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -23,11 +24,7 @@
         <header>
             <div class="hTop">
                 <div class="tNav">
-                    <ul>
-                        <li><a href="login.php">로그인</a></li>
-                        <li><a href="join.php">회원가입</a></li>
-                        <li class="last"><a href="nonMember.php">비회원 예매확인</a></li>
-                    </ul>
+                    <? include "../lib/top_nav.php"; ?>
                 </div>
             </div>
             <div class="hBottom">
@@ -101,7 +98,8 @@
             <div class="joinClause">
                 <p class="numTop">02</p>
                 <h4>기본정보 (<span class="orange">*</span>는 필수 정보입니다)</h4>
-                <form name="join_form" id="joinForm" method="post" action="#">
+                <!--데이터 전송은 insert.php에 해서 DB에 데이터를 추가할것!-->
+                <form name="join_form" id="joinForm" method="post" action="insert.php">
                     <table>
                         <caption>회원정보</caption>
                         <tr>
@@ -136,7 +134,7 @@
                         <tr>
                             <th>
                                 <span class="orange">*</span>
-                                <label for="joinPwChk">비밀번호</label>
+                                <label for="joinPwChk">비밀번호 확인</label>
                             </th>
                             <td>
                                 <input type="password" name="passchk" id="joinPwChk" class="box01" maxlength="20">
@@ -189,9 +187,9 @@
                                     <option value="019">019</option>
                                 </select>
                                 -
-                                <input type="text" id="phone02" class="box02" maxlength="4">
+                                <input type="text" name="phone02" id="phone02" class="box02" maxlength="4">
                                 -
-                                <input type="text" id="phone03" class="box02" maxlength="4">
+                                <input type="text" name="phone03" id="phone03" class="box02" maxlength="4">
                             </td>
                         </tr>
                         <tr>
@@ -200,9 +198,9 @@
                                 SMS 수신여부
                             </th>
                             <td>
-                                <input type="radio" name="smsreception" id="smsYes" checked>
+                                <input type="radio" name="smsreception" id="smsYes" value="yes" checked>
                                 <label for="smsYes">수신</label>
-                                <input type="radio" name="smsreception" id="smsNo">
+                                <input type="radio" name="smsreception" id="smsNo" value="no">
                                 <label for="smsNo">수신하지 않음</label>
                             </td>
                         </tr>
@@ -230,15 +228,15 @@
                                 이메일 수신여부
                             </th>
                             <td class="last">
-                                <input type="radio" name="emailreception" id="emailYes" checked>
+                                <input type="radio" name="emailreception" id="emailYes" value="yes" checked>
                                 <label for="emailYes">수신</label>
-                                <input type="radio" name="emailreception" id="emailNo">
+                                <input type="radio" name="emailreception" id="emailNo" value="no">
                                 <label for="emailNo">수신하지 않음</label>
                             </td>
                         </tr>
                     </table>
                     <div class="btnWrap">
-                        <button type="submit">회원가입</button>
+                        <button type="submit" id="submitBtn">회원가입</button>
                         <button type="reset">입력취소</button>
                     </div>
                     <div id="layer">

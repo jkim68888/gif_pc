@@ -1,3 +1,71 @@
+<?php
+    include "../lib/session.php";
+
+    //DB연결
+    include "../lib/dbconn.php";
+    
+    $num = $_GET['num']; //주소표시줄에서 해당글 번호 받음
+    $table = $_GET['table']; //주소표시줄에서 테이블명 받기
+    $page = $_GET['page']; //주소표시줄에서 페이지번호 받기
+
+    //SQL문
+    $sql = "SELECT * FROM $table WHERE num=$num";
+    
+    $result = mysqli_query($connect, $sql);
+
+    $row = mysqli_fetch_assoc($result);
+
+    //모든 데이터를 각각 변수에 담기
+    $item_num     = $row['num'];
+	$item_id      = $row['id'];
+	$item_name    = $row['name'];
+	$item_hit     = $row['hit'];
+
+	$image_name[0]   = $row['file_name_0'];
+	$image_name[1]   = $row['file_name_1'];
+
+	$image_copied[0] = $row['file_copied_0'];
+	$image_copied[1] = $row['file_copied_1'];
+
+    $item_date    = $row['regist_day'];
+	$item_subject = str_replace(" ", "&nbsp;", $row['subject']);
+
+	$item_content = $row['content'];
+	$is_html      = $row['is_html'];
+
+
+    //html쓰기가 체크가 안되면 엔터처리가 안되서 되도록 처리
+    if($is_html!= "y"){
+		$item_content = str_replace(" ", "&nbsp;", $item_content);
+		$item_content = str_replace("\n", "<br>", $item_content);
+	}
+
+    //반복문으로 이미지 정보 처리
+    for($i=0; $i<2; $i++){
+		if ($image_copied[$i]){
+			$imageinfo = GetImageSize("./data/".$image_copied[$i]);
+
+			$image_width[$i] = $imageinfo[0];
+			$image_height[$i] = $imageinfo[1];
+			$image_type[$i]  = $imageinfo[2];
+
+			if ($image_width[$i] > 785){
+				$image_width[$i] = 785;
+            }
+		}else{
+			$image_width[$i] = "";
+			$image_height[$i] = "";
+			$image_type[$i]  = "";
+		}
+	}
+
+    //뷰로 글을 조회할때마다 조회수가 증가
+    $new_hit = $item_hit + 1;
+    
+    $sql = "UPDATE $table SET hit=$new_hit WHERE num=$num";   // 글 조회수 증가시킴
+
+    mysqli_query($connect, $sql);
+?>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -21,11 +89,7 @@
         <header>
             <div class="hTop">
                 <div class="tNav">
-                    <ul>
-                        <li><a href="../tnav/login.php">로그인</a></li>
-                        <li><a href="../tnav/join.php">회원가입</a></li>
-                        <li class="last"><a href="../tnav/nonMember.php">비회원 예매확인</a></li>
-                    </ul>
+                    <? include "../lib/top_nav.php"; ?>
                 </div>
             </div>
             <div class="hBottom">
@@ -103,28 +167,71 @@
                     <caption>게시글 확인</caption>
                     <tr class="top">
                         <th>제목</th>
-                        <td>제목이당</td>
+                        <td><?= $item_subject ?></td>
                         <th>조회수</th>
-                        <td>3</td>
+                        <td class="last"><?= $item_hit ?> </td>
                     </tr>
                     <tr>
                         <th>작성자</th>
-                        <td>홍길동</td>
+                        <td><?= $item_name ?> </td>
                         <th>작성일</th>
-                        <td>2021-02-02</td>
+                        <td class="last"><?= $item_date ?> </td>
                     </tr>
                     <tr>
                         <th>내용</th>
-                        <td colspan="3">
-                            내용 쭉~
+                        <td colspan="3" class="subtance last">
+                            <!--컨텐츠내용가져오기-->
+
+                            <!--1. 이미지를 반복문으로 가져옴-->
+                            <?php
+                                for($i=0; $i<2; $i++){
+                                    if ($image_copied[$i]){
+                                        $img_name = $image_copied[$i];
+                                        $img_name = "./data/".$img_name;
+                                        $img_width = $image_width[$i];
+
+                                        echo "<img src='$img_name' width='$img_width'>"."<br><br>";
+                                    }
+                                }
+                            ?>
+
+                            <!--2. 컨텐츠 내용 가져오기-->
+                            <?= $item_content ?>
                         </td>
                     </tr>
                 </table>
                 <div class="btnWrap">
+                    <!--버튼-->
 
-                    <a href="notice.php" class="listBtn">목록</a>
-                    <a href="notice_write.php" class="modifyBtn">수정</a>
-                    <a href="#" class="deleteBtn">삭제</a>
+                    <!--1. 목록버튼-->
+                    <a href="notice.php?table=<?=$table?>&page=<?=$page?>" class="listBtn">목록</a>
+
+                    <!--수정버튼과 삭제버튼 권한 설정-->
+                    <?php
+                        //글쓴 사람이거나, 관리자거나, 레벨이 1이 되는 사람은 해당글을 삭제하거나 수정할 수 있도록 설정
+                        if($userid == $item_id || $userid == "admin" || $userlevel==1 ){
+                    ?>
+
+                    <!--2. 수정버튼-->
+                    <a href="notice_write.php?table=<?=$table?>&mode=modify&num=<?=$item_num?>&page=<?=$page?>" class="modifyBtn">수정</a>
+
+                    <!--3. 삭제버튼-->
+                    <a id="delete_btn" class="deleteBtn" href="delete.php?table=<?=$table?>&num=<?=$item_num?>">삭제</a>&nbsp;
+
+                    <?php
+                        }
+                    ?>
+
+
+                    <!--4. 글쓰기버튼-->
+                    <?php
+                        if($userid){
+                    ?>
+                        <a href="notice_write.php?table=<?=$table?>" class="writeBtn">글쓰기</a>
+                    <?php
+                        }
+                    ?>
+
                 </div>
             </div>
         </div>
