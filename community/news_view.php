@@ -217,21 +217,12 @@
                     <a href="news_write.php?table=<?=$table?>&mode=modify&num=<?=$item_num?>&page=<?=$page?>" class="modifyBtn">수정</a>
 
                     <!--3. 삭제버튼-->
-                    <a id="delete_btn" class="deleteBtn" href="delete.php?table=<?=$table?>&num=<?=$item_num?>">삭제</a>&nbsp;
+                    <a id="delete_btn" class="deleteBtn" href="delete02.php?table=<?=$table?>&num=<?=$item_num?>">삭제</a>&nbsp;
 
                     <?php
                         }
                     ?>
 
-
-                    <!--4. 글쓰기버튼-->
-                    <?php
-                        if($userid){
-                    ?>
-                        <a href="news_write.php?table=<?=$table?>" class="writeBtn">글쓰기</a>
-                    <?php
-                        }
-                    ?>
 
                 </div>
             </div>
