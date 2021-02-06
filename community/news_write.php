@@ -137,12 +137,12 @@
                 if($mode=="modify"){
             ?>
                 <!--글작성폼 : enctype="multipart/form-data" 파일업로드를 위해 반드시 작성-->
-                <form id="boardWrite" name="board_form" method="post" action="insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>" enctype="multipart/form-data"> 
+                <form id="boardWrite" name="board_form" method="post" action="insert02.php?mode=modify&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>" enctype="multipart/form-data"> 
 
             <?php
                 }else{//그냥 글쓰기면
             ?>
-                <form id="boardWrite" name="board_form" method="post" action="insert.php?table=<?=$table?>" enctype="multipart/form-data">
+                <form id="boardWrite" name="board_form" method="post" action="insert02.php?table=<?=$table?>" enctype="multipart/form-data">
             <?php
                 }
             ?> 

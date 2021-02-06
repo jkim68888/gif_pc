@@ -1,4 +1,4 @@
-//글쓰기 폼에서 글저장버튼 
+//글쓰기 폼에서 글등록버튼 
 function check_input(){
     if(!document.board_form.subject.value){
         alert("제목을 입력하세요!");    

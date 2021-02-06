@@ -222,16 +222,6 @@
                         }
                     ?>
 
-
-                    <!--4. 글쓰기버튼-->
-                    <?php
-                        if($userid){
-                    ?>
-                        <a href="notice_write.php?table=<?=$table?>" class="writeBtn">글쓰기</a>
-                    <?php
-                        }
-                    ?>
-
                 </div>
             </div>
         </div>
