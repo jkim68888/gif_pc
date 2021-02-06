@@ -21,12 +21,13 @@ $(document).ready(function(){
     $('.deleteBtn').click(function(e){
         e.preventDefault();
         
-        var href = this.attr('href');
+        var href = $(this).attr('href');
         
-        var q = confirm("한번 삭제한 자료는 복구할 수 없습니다. \n\n정말삭제하시겠습니까?");
+        var q = confirm("한번 삭제한 자료는 복구할 수 없습니다.\n정말삭제하시겠습니까?");
         
         if(q){
             location.href = href;
         }
+        
     });
 });

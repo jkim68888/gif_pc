@@ -84,7 +84,7 @@
         <script src="../js/jquery.easing.1.3.js"></script>
         <script src="../js/common.js"></script>
         <script src="../js/sub.js"></script>
-        <script src="../js/write.js"></script>
+        <script src="write.js"></script>
     </head>
     <body>
         <header>
