@@ -23,10 +23,6 @@
 		$item_content     = $row['content'];
 		$item_name     = $row['name'];
         
-        echo $item_name;
-        
-        
-
 		$item_file_0 = $row['file_name_0'];
 		$item_file_1 = $row['file_name_1'];
 
