@@ -104,7 +104,7 @@
                         </li>
                     </ul>
                 </div>
-                <img class="posterImg">
+                <img class="posterImg" alt="영화 포스터 이미지">
             </div>
         </div>
         <div id="descriptBox">
@@ -118,7 +118,7 @@
             </div>
             <div class="trailerBox">
                 <h3>예고편</h3>
-                <iframe width="640" height="360" frameborder="0" allowfullscreen class="trailer"></iframe>
+                <iframe width="640" height="360" frameborder="0" allowfullscreen class="trailer" title="영화예고편"></iframe>
             </div>
             <div class="imgBox">
                 <h3>스틸컷</h3>

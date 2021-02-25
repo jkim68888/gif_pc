@@ -35,8 +35,7 @@ $(document).ready(function(){
                 $('.rate p').text($rate);
                 $('.grade p').text($grade + " 점");
                 $('.posterImg').attr({ 
-                    src: $img, 
-                    alt: "영화 포스터 이미지"
+                    src: $img
                 });
                 $('.descript').text($descript);
                 $('.date').text("개봉일: " + $date);
