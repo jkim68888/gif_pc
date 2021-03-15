@@ -91,8 +91,8 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="index.php">
-                                    <h1></h1>
+                                <a href="index.php" class="logo">
+                                    <h1 class="logo_away">G.I.F 로고 이미지</h1>
                                 </a>
                             </li>
                             <li>
