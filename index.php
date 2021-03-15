@@ -91,9 +91,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="index.php" class="logo">
-                                    <h1 class="logo_away">G.I.F 로고 이미지</h1>
-                                </a>
+                                <a href="index.php" class="logo"></a>
                             </li>
                             <li>
                                 <a href="introduce/about.php" class="mainNav">영화관소개</a>

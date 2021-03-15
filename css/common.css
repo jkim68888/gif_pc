@@ -11,7 +11,6 @@ button{ cursor: pointer; }
 .wrap{ width: 1180px; height: 100%; margin: 0 auto; }
 label.away{ position: absolute; left: -999em; } 
 table{ border-spacing: 0; border-collapse: collapse; }
-.logo_away{ text-indent: -99999em; }
 
 /* wrap */
 .mainWrap{ position: relative; width: 100%; min-width: 1180px; height: 100%; min-height: 500px; }
@@ -25,7 +24,7 @@ header{ position: absolute; top: 0; left: 0; width: 100%; min-width: 1180px; hei
 .tNav a{ font-size: 16px; color: #fff; }
 .hBottom{ width: 100%; min-width: 1180px; height: 80px; }
 .gnb{ width: 1180px; height: 80px; margin: 0 auto; }
-.gnb h1{ width: 52px; height: 75px; background-image: url(../images/common/header_logo.png); background-repeat: no-repeat; background-position: center; background-size: cover; }
+.gnb .logo{ display: block; width: 52px; height: 75px; background-image: url(../images/common/header_logo.png); background-repeat: no-repeat; background-position: center; background-size: cover; }
 .gnb a{ font-size: 20px; color: #fff; }
 .gnb > ul > li{ position: relative; float: left; line-height: 80px; margin: 0 30px; box-sizing: border-box; }
 .gnb > ul > li:nth-child(4){ margin-right: 130px; box-sizing: border-box; }
