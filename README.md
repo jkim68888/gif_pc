@@ -1,4 +1,4 @@
-# Responsive Web Project
+# PC Webpage Project
 
 <img src="https://user-images.githubusercontent.com/75922558/115170098-c908d700-a0fa-11eb-85ad-8f373cd0d8c1.png" width="56" height="56">
 <img src="https://user-images.githubusercontent.com/75922558/115170171-f9e90c00-a0fa-11eb-812e-32863980f9a0.png" width="56" height="56">
